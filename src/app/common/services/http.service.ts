@@ -12,7 +12,6 @@ export class HttpService {
   endpoint = environment.data_url;
   statesEndpoint = environment.states_url;
   contactsEndpoint = environment.contact_url;
-  statesDataEndpoint = environment.states_data_url;
   worldStatsEndpoint = environment.world_stats_url;
   news_url = environment.news_url;
   constructor(private http: HttpClient) {}
