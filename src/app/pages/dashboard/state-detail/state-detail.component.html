@@ -1,0 +1,22 @@
+<ng-container *ngIf="stateData$ | async as stateData">
+  <section class="district">
+    <div class="section__heading" fxLayout="row nowrap" fxLayoutAlign="space-between center">
+      <h3>{{stateData.state}}</h3>
+      <span></span>
+    </div>
+    <section>
+      <app-us-map [selectedState]="stateData.state"></app-us-map>
+    </section>
+<!--    <section class="district__contact" fxLayoutAlign="space-between center">-->
+<!--      <div>-->
+<!--        <p>Covid Helpline:</p>-->
+<!--        <p>-->
+<!--          {{stateData?.contact.number}}-->
+<!--        </p>-->
+<!--      </div>-->
+<!--      <a href="tel:+{{stateData?.contact.number}}" class="district__contact-icon">-->
+<!--        <mat-icon svgIcon="phone"></mat-icon>-->
+<!--      </a>-->
+<!--    </section>-->
+  </section>
+</ng-container>

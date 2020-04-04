@@ -1,0 +1,30 @@
+.quick-stats {
+  background-color: var(--background-light);
+  border: 1px solid var(--accent);
+  padding: 16px 20px;
+  margin: 8px;
+  position: relative;
+  border-radius: 0;
+  &__label {
+    margin: 0;
+    color: var(--text-light);
+    font-size: 14px;
+  }
+
+  &__value {
+    color: var(--text-primary);
+    font-weight: 600;
+    margin: 0;
+    font-size: 24px;
+  }
+  &__change {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    p {
+      color: var(--text-light);
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

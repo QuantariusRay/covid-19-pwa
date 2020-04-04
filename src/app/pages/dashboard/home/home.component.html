@@ -1,0 +1,57 @@
+<main class="container">
+  <section>
+
+    <ng-container *ngIf="worldStats$ | async as worldStats;else quickStatsLoading">
+      <section class="quick-stats" fxLayout="column wrap">
+        <div class="section__heading" fxLayout="row nowrap" fxLayoutAlign="space-between center">
+          <h3>World Stats</h3>
+          <span></span>
+        </div>
+        <div class="section__container" fxLayout="row wrap">
+          <div class="quick-stats__item" *ngFor="let item of worldStats">
+            <app-quick-stats [data]="item"></app-quick-stats>
+          </div>
+        </div>
+      </section>
+    </ng-container>
+
+    <ng-container *ngIf="totalStats$ | async as totals; else quickStatsLoading">
+      <section class="quick-stats" fxLayout="column wrap">
+        <div class="section__heading" fxLayout="row nowrap" fxLayoutAlign="space-between center">
+          <h3>US Stats</h3>
+          <span></span>
+        </div>
+        <div class="section__container" fxLayout="row wrap">
+          <div class="quick-stats__item" *ngFor="let item of totals">
+            <app-quick-stats [data]="item"></app-quick-stats>
+          </div>
+        </div>
+      </section>
+    </ng-container>
+
+    <ng-template #quickStatsLoading>
+      <p>Data Loading</p>
+    </ng-template>
+  </section>
+
+  <section class="state-info">
+    <div class="section__heading" fxLayout="row nowrap" fxLayoutAlign="space-between center">
+      <h3>State States</h3>
+      <span></span>
+    </div>
+    <div class="state-info__search" fxLayoutAlign="start center">
+      <div class="search__input" fxFlex="100">
+        <mat-icon svgIcon="search" class="search__icon"></mat-icon>
+        <input type="text" role="searchbox" aria-label="Search" placeholder="Search state" [formControl]="searchTerm"
+               #search id="search">
+      </div>
+    </div>
+    <ng-container *ngIf="statesData$ | async as stateData">
+      <div class="state-info__items" *ngFor="let state of stateData">
+        <app-category-card [data]="state"></app-category-card>
+      </div>
+
+    </ng-container>
+  </section>
+
+</main>
