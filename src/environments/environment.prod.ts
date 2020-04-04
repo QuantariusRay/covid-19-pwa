@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  data_url: 'http://covidtracking.com/api/us',
+  data_url: 'https://covidtracking.com/api/us',
   states_url: 'https://covidtracking.com/api/states',
   states_data_url: 'https://covidtracking.com/api/states/info',
   contact_url: 'https://api.rootnet.in/covid19-in/contacts',
