@@ -32,7 +32,7 @@
       <article class="info-cards__item" fxFlex="33.33">
         <div class="info-cards__item-content" fxLayout="column">
           <span class="info-cards__value">
-            {{data?.recovered}}
+            {{data?.recovered ? data.recovered : 'N/A' }}
           </span>
           <span class="info-cards__label">Recovered</span>
         </div>

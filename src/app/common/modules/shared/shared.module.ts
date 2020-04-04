@@ -18,7 +18,7 @@ import { RouterModule } from '@angular/router';
 import { QuickStatsComponent } from '../../components/quick-stats/quick-stats.component';
 import { MaterialModule } from '../material/material.module';
 import { CategoryCardComponent } from '../../components/category-card/category-card.component';
-import { UsMapComponent } from '../../components/india-map/us-map.component';
+import { UsMapComponent } from '../../components/us-map/us-map.component';
 
 @NgModule({
   declarations: [QuickStatsComponent, CategoryCardComponent, UsMapComponent],

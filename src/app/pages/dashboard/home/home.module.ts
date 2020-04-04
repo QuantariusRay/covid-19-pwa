@@ -7,10 +7,11 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { SharedModule } from '../../../common/modules/shared/shared.module';
 import { MaterialModule } from '../../../common/modules/material/material.module';
-import { ContactInfoComponent } from './contact-info/contact-info.component';
 
 @NgModule({
-  declarations: [HomeComponent, ContactInfoComponent],
+  declarations: [
+    HomeComponent
+  ],
   imports: [
     CommonModule,
     HomeRoutingModule,

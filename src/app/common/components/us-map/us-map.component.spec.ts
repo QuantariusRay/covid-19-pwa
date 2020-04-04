@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UsMapComponent } from './us-map.component';
 
-describe('IndiaMapComponent', () => {
+describe('Us Map Component', () => {
   let component: UsMapComponent;
   let fixture: ComponentFixture<UsMapComponent>;
 

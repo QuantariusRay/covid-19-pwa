@@ -4,7 +4,7 @@
     <ng-container *ngIf="worldStats$ | async as worldStats;else quickStatsLoading">
       <section class="quick-stats" fxLayout="column wrap">
         <div class="section__heading" fxLayout="row nowrap" fxLayoutAlign="space-between center">
-          <h3>World Stats</h3>
+          <h2>World Stats</h2>
           <span></span>
         </div>
         <div class="section__container" fxLayout="row wrap">
@@ -18,7 +18,7 @@
     <ng-container *ngIf="totalStats$ | async as totals; else quickStatsLoading">
       <section class="quick-stats" fxLayout="column wrap">
         <div class="section__heading" fxLayout="row nowrap" fxLayoutAlign="space-between center">
-          <h3>US Stats</h3>
+          <h2>US Stats</h2>
           <span></span>
         </div>
         <div class="section__container" fxLayout="row wrap">
@@ -36,7 +36,7 @@
 
   <section class="state-info">
     <div class="section__heading" fxLayout="row nowrap" fxLayoutAlign="space-between center">
-      <h3>State States</h3>
+      <h2>State Stats</h2>
       <span></span>
     </div>
     <div class="state-info__search" fxLayoutAlign="start center">

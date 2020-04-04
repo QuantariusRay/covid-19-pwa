@@ -4,19 +4,38 @@
       <h3>{{stateData.state}}</h3>
       <span></span>
     </div>
+
     <section>
-      <app-us-map [selectedState]="stateData.state"></app-us-map>
+      <div class="map">
+        <app-us-map [selectedState]="stateData.state"></app-us-map>
+      </div>
     </section>
-<!--    <section class="district__contact" fxLayoutAlign="space-between center">-->
-<!--      <div>-->
-<!--        <p>Covid Helpline:</p>-->
-<!--        <p>-->
-<!--          {{stateData?.contact.number}}-->
-<!--        </p>-->
-<!--      </div>-->
-<!--      <a href="tel:+{{stateData?.contact.number}}" class="district__contact-icon">-->
-<!--        <mat-icon svgIcon="phone"></mat-icon>-->
-<!--      </a>-->
-<!--    </section>-->
+
+    <div class=info-card fxLayout="row no-wrap">
+      <div class="__row">
+        <label>Total Tests:</label>
+        <span>{{ stateData.totalTestResults }}</span>
+      </div>
+
+      <div class="__row">
+        <label>Deaths:</label>
+        <span>{{ stateData.death }}</span>
+      </div>
+
+      <div class="__row">
+        <label>Active Cases:</label>
+        <span>{{ stateData.positive }}</span>
+      </div>
+
+      <div class="__row">
+        <label>Hospitalized:</label>
+        <span>{{ stateData.hospitalized }}</span>
+      </div>
+
+      <div class="__row">
+        <label>Last Updated:</label>
+        <span>{{ stateData.dateModified | date:'short' }}</span>
+      </div>
+    </div>
   </section>
 </ng-container>
